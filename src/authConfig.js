@@ -14,34 +14,34 @@ export const msalConfig = {
     auth: {
         clientId: "0ef3d51f-dbf0-4393-ad65-f7b6fbaaae74",
         authority: "https://login.microsoftonline.com/2e93df54-f282-4f5c-9066-3c8ed23a3072",
-        redirectUri: "http://localhost:3000/"
+        redirectUri: "https://next-msal-auth.herokuapp.com"
     },
     cache: {
         cacheLocation: "sessionStorage", // This configures where your cache will be stored
         storeAuthStateInCookie: false, // Set this to "true" if you are having issues on IE11 or Edge
     },
-    system: {	
-        loggerOptions: {	
-            loggerCallback: (level, message, containsPii) => {	
-                if (containsPii) {		
-                    return;		
-                }		
-                switch (level) {		
-                    case LogLevel.Error:		
-                        console.error(message);		
-                        return;		
-                    case LogLevel.Info:		
-                        console.info(message);		
-                        return;		
-                    case LogLevel.Verbose:		
-                        console.debug(message);		
-                        return;		
-                    case LogLevel.Warning:		
-                        console.warn(message);		
-                        return;		
-                }	
-            }	
-        }	
+    system: {
+        loggerOptions: {
+            loggerCallback: (level, message, containsPii) => {
+                if (containsPii) {
+                    return;
+                }
+                switch (level) {
+                    case LogLevel.Error:
+                        console.error(message);
+                        return;
+                    case LogLevel.Info:
+                        console.info(message);
+                        return;
+                    case LogLevel.Verbose:
+                        console.debug(message);
+                        return;
+                    case LogLevel.Warning:
+                        console.warn(message);
+                        return;
+                }
+            }
+        }
     }
 };
 
