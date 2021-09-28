@@ -15,8 +15,9 @@
     "react-scripts": "^4.0.2"
   },
   "scripts": {
-    "build": "next build",
-    "start": "next start -p $PORT"
+    "start": "node index.js",
+    "dev": "react-scripts start",
+    "build": "react-scripts build"
   },
   "browserslist": {
     "production": [
